@@ -1,0 +1,112 @@
+
+    body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(95deg, #f3cfb3cb,#fce8d2ab);
+    margin: 0;
+
+
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #ff831e;
+    margin-bottom: 5px;
+}
+h5 {
+    text-align: center;
+    color: #ff831e;
+    margin-top: 0;
+    font-weight: 300;
+}
+h6 {
+    text-align: center;
+    color: #ff831e;
+    margin-top: 0;
+    font-weight: 300;
+}
+
+.chatbox {
+    border: 1px solid #f6d7b6;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    background: linear-gradient(145deg, #fffbf7, #f6d7b6);
+    border: 2px solid rgb(94, 94, 94)k;
+
+}
+
+.messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    border-bottom: 1px solid #f6d7b6;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.message {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.message.user {
+    text-align: right;
+    color: #090909;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #fffaf5;
+    border-top: 1px solid #f6d7b6;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ffe3cc;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-area input:focus {
+    border-color: #ff831e;
+    box-shadow: 0px 0px 8px rgba(204, 54, 0, 0.3);
+}
+
+.input-area button {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #f1c40f, #c25a00);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.input-area button:hover {
+    background: linear-gradient(90deg, #c25a00, #f1c40f);
+}
+

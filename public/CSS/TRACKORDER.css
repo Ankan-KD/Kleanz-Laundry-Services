@@ -1,0 +1,108 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bcbcbc;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin:  auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* User ID Input Section */
+.user-id-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-id-section input {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.user-id-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h2{
+    background-color: #383838;
+    color: white;
+    padding: 10px;
+}
+
+
+.user-id-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styling for Details */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+th {
+    background-color: #f1f1f1;
+    font-weight: 600;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+td strong {
+    color: #555;
+    align-self: flex-start;
+}
+
+/* Services Display */
+#services-details {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Logout Button Styling */
+.logout-button {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 10px 0;
+    background-color: #ff3b30;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #e6362d;
+}

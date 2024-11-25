@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/LOGIN.css">
+    <link rel="stylesheet" href="CSS/header_footer.css">
+</head>
+<body>
+<!-- HEADER -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="Photos/WebsiteLogo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Help.html">Contact Us</a></li>
+            <li><a href="Chatbox.html">Chatbox</a></li>
+            <li><a href="details.html">Login</a></li>
+            <div class="cta1">
+                <a href="schedule_order.html">Schedule A Service</a>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<center>
+    <div class="login-container">
+        <h2 class="login-title">Login</h2>
+        <form id="login-form" class="login-form" onsubmit="return validateForm(event)">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required autocomplete="off">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required autocomplete="off">
+            </div>
+
+            <!-- OTP Input and Verify Button -->
+            <div class="input-group">
+                <label for="otp">Enter OTP</label>
+                <input type="text" id="otp" name="otp">
+            </div>
+            <button type="button" class="verify-btn" onclick="sendOtp()">Send OTP</button>
+            <button type="button" class="verify-btn" onclick="verifyOtp()">Verify OTP</button>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <p class="error-message" id="error-message"></p>
+    </div>
+</center>
+
+
+
+
+
+<br><!-- FOOTER SECTION -->
+<footer>
+    <div class="taglinefooter">
+        <h3>Enjoy Life Stress-Free, Kleanz Has You Covered!</h3>
+    </div>
+
+<br>
+    <div class="footer-container">
+        <div class="footer-row">
+
+
+            <div class="footer-col logo-col">
+                <img src="Photos/WebsiteLogo.png" alt="DaynDry Logo" class="logo" />
+                <custom-para style="color: rgb(202, 202, 202);">
+                    Kleanz Pvt. Ltd.<br>
+                    124, 60, Basanta Lal Saha Rd, Tara Park, Behala, Kolkata, West Bengal 700053
+                </custom-para>
+
+
+                <div class="support">
+                    <custom-para style="color: rgb(202, 202, 202);"><strong>Support center 24/7</strong><br>
+                    <i class="fas fa-headset"></i> +91 9038421528</custom-para>
+                </div>
+            </div>
+
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="Chatbox.html">FAQ's</a></li>
+                    <li><a href="Help.html">Contact Us</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="Help.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#service_list">Dry Cleaning</a></li>
+                    <li><a href="services.html#service_list">Laundry Service</a></li>
+                    <li><a href="services.html#service_list">Wet Cleaning</a></li>
+                    <li><a href="services.html#service_list">Wedding Gowns</a></li>
+                    <li><a href="services.html#service_list">Express Service</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col newsletter-col">
+                <center><h44>Subscribe Our Newsletter</h44></center>
+                <custom-para>
+                    Enter your email and we will send you newsletters.
+                </custom-para>
+                
+                <form>
+                    <input type="text" placeholder="Your Name" />
+                    <input type="email" placeholder="Your email" />
+                    <button type="submit">Subcribe  </button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook" class="social-icon"></a>
+                <a href="#"><img src="icons/twitter-x.svg" alt="Twitter" class="social-icon"></a>
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram" class="social-icon"></a>
+                <a href="#"><img src="icons/youtube.svg" alt="YouTube" class="social-icon"></a>
+            </div>
+            
+            <p>Copyright © 2024 Kleanz</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+<script src="JS/navbar.js"></script>
+<script>
+// Function to validate the login credentials and OTP
+function validateForm(event) {
+    event.preventDefault();  // Prevent form submission
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const otp = document.getElementById('otp').value;
+    const errorMessage = document.getElementById('error-message');
+    
+    // Replace with actual username and password for validation
+    const correctUsername = 'admin';
+    const correctPassword = 'password123';
+
+    // Verify OTP first
+    fetch('/verify-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ otp })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === 'OTP verified') {
+            if (username === correctUsername && password === correctPassword) {
+                window.location.href = 'details.html';
+            } else {
+                errorMessage.textContent = 'Incorrect username or password. Please try again.';
+            }
+        } else {
+            errorMessage.textContent = 'Invalid OTP. Please try again.';
+        }
+    });
+}
+
+// Function to send OTP to the admin email
+function sendOtp() {
+    fetch('/send-otp', {
+        method: 'POST'
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('OTP sent to admin email. Please check and enter it.');
+    })
+    .catch(error => {
+        console.error('Error sending OTP:', error);
+    });
+}
+
+function verifyOtp() {
+    const otp = document.getElementById('otp').value;
+    const errorMessage = document.getElementById('error-message');
+
+    if (!otp) {
+        errorMessage.textContent = 'Please enter the OTP.';
+        return;
+    }
+
+    // Make a POST request to verify the OTP
+    fetch('/verify-otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ otp })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message === 'OTP verified') {
+            errorMessage.textContent = 'OTP verified successfully.';
+        } else {
+            errorMessage.textContent = 'Invalid OTP. Please try again.';
+        }
+    })
+    .catch(error => {
+        errorMessage.textContent = 'Error in OTP verification.';
+        console.error('Error:', error);
+    });
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,730 @@
+/* Global Reset and Box-Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Container Styling */
+body {
+    font-family: 'Nunito', sans-serif; /* Use Nunito font */
+    line-height: 1.1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+
+
+
+/* Hero Section *//* Hero Section *//* Hero Section *//* Hero Section *//* Hero Section */
+.hero {
+    background-image: url('../Photos/hero.jpg');
+    background-size: cover;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative; /* Allow positioning of the avatar */
+    border-bottom-right-radius: 200px; /* Rounded bottom right corner */
+    overflow: hidden; /* Ensure child elements don’t overflow the rounded corners */
+}
+
+.hero-avatar {
+    position: absolute; /* Position the avatar over the background */
+    left: 40px; /* Space from the left edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    z-index: 2; /* Ensure avatar is above the frosted background */
+}
+
+.hero-avatar img {
+    width: 700px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.hero-content {
+    margin-left: 700px; /* Add left margin to shift text to the right */
+    text-align: left; /* Align text to the left */
+    z-index: 2; /* Ensure text is above the frosted background */
+    
+}
+
+.hero-content h1 {
+    font-size: 3em;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+
+}
+
+.discount-offer {
+    background-color: #c05e0d; /* Yellow background */
+    border-radius: 50%; /* Circular shape */
+    padding: 2px;
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    position: relative; /* For positioning the text */
+    text-align: center; /* Center text */
+    border: 5px solid #ffffff; /* White border */
+}
+
+.discount-offer p {
+    font-size: 20px;
+    color: black;
+    margin: 0; /* Remove margin to eliminate gaps */
+    font-weight: bold;
+    transform: rotate(-15deg); /* Incline text at -15 degrees */
+}
+
+.discount-offer h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0; /* Remove margin to eliminate gaps */
+    transform: rotate(-15deg); /* Incline text at -15 degrees */
+}
+
+
+
+
+
+
+
+
+/* Fading in animation */
+@keyframes fadeIn {
+    0% {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    100% {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+  /* Add the animation for hero-content */
+.hero-content h1, .hero-content p {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+  /* When active class is added, apply animation */
+.hero-content.active h1,
+.hero-content.active p {
+    animation: fadeIn 2s forwards;
+}
+
+  /* For the CTA buttons */
+.ctaHome a {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.ctaHome.active a {
+    animation: fadeIn 2.5s forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Services Section *//* Services Section *//* Services Section *//* Services Section *//* Services Section */
+
+#services {
+    padding: 6px 0;
+    background-color: #f8f5f562;
+    text-align: center;
+    opacity: 0; /* Start hidden for fade-in effect */
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service {
+    width: 30%;
+    border: 5px solid #fff;
+    padding: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 0px 25px rgba(255, 145, 0, 0.877);
+    transform: translateY(500px); /* Start with a slight downward offset */
+    opacity: 0; /* Start hidden */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.service.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.service h3 {
+    margin-bottom: 10px;
+}
+
+.service img {
+    margin-bottom: 10px;
+    max-width: 100px;
+}
+
+.service p {
+    margin-bottom: 15px;
+}
+
+.service a {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    background-clip: padding-box;
+}
+
+.service a::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    z-index: -1;
+    font-weight: bold;
+    background: linear-gradient(90deg, #f1c40f, #c25a00);
+    border-radius: 50px;
+}
+
+.bold-link {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* About Section *//* About Section *//* About Section *//* About Section *//* About Section *//* About Section */
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: #000;
+    background-color: #f9f9f9;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.about-images {
+    position: relative;
+    flex: 1;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.overlay-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 5px solid #f8f8f8;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 1px;
+}
+
+.overlay-image img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.about-content {
+    flex: 1;
+    padding-left: 50px;
+    color: #000;
+}
+
+.sub-heading {
+    color: #da7437;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-head {
+    font-size: 36px;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+.description_WHOWEARE {
+    font-size: 16px;
+    color: #292929;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    flex: 1;
+    padding-right: 30px;
+}
+
+.checkmark {
+    color: #da7437;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.feature-item strong {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+}
+
+
+
+
+/* Button */
+.more-button {
+    background-color: #da7437;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.more-button:hover {
+    background-color: #b34806;
+}
+
+
+
+
+
+
+
+/* SLIDER Section container */
+.steps-section {
+    position: relative;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    overflow: hidden;
+    background-color: #c4a600;
+}
+
+/* Image slider background */
+.image-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.slider-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Blackish frosted overlay */
+.frosted-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Blackish overlay with 50% opacity */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    z-index: 2;
+}
+
+/* Container for content */
+.steps-container {
+    display: flex;
+    align-items: center;
+    z-index: 3; /* Content above both slider and overlay */
+    background-color: rgba(255, 255, 255, 0); /* White content box */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Left Image */
+.steps-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.steps-image {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Right Content */
+.steps-content {
+    flex: 2;
+    padding: 40px;
+}
+
+/* Text Styles */
+.sub-heading {
+    color: #ff8c47;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.main-heading {
+    font-size: 36px; /* You can adjust this */
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.description {
+    font-size: 16px;
+    color: #d1d1d1;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.steps-list {
+    margin-top: 20px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.step-icon {
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ff8c47;
+}
+
+/* Custom Heading Class for Steps */
+.step-text h1 {
+    font-size: 20px; /* Adjust as needed */
+    color: #d6d6d6;
+    margin-bottom: 5px;
+}
+
+.step-text p {
+    font-size: 14px;
+    color: #e9e9e9;
+    line-height: 1.5;
+}
+
+.step-icon {
+    margin-right: 15px; /* Maintain spacing between icon and text */
+}
+
+.step-icon img {
+    width: 40px; /* Set desired width */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align with text vertically */
+}
+
+
+
+
+
+
+
+
+
+
+/* Pricing Section *//* Pricing Section *//* Pricing Section *//* Pricing Section */
+
+
+.pricing-section {
+    padding: 50px 10px; /* Added left and right padding */
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.pricing-header h1 {
+    font-size: 50px; /* Increased font size */
+    color: #333;
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.pricing-header p {
+    font-size: 22px; /* Increased font size */
+    color: #666;
+    margin-bottom: 60px; /* Increased margin */
+    max-width: 800px; /* Increased max-width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 35px; /* Increased gap between cards */
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(182, 82, 0, 0.705);
+    padding: 10px; /* Increased padding */
+    width: 400px; /* Slightly increased width */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-25px); /* Increased hover effect */
+}
+
+.pricing-header-card {
+    background: linear-gradient(45deg, #017056cc, #00df64d2); /* Gradient colors */
+    padding: 30px; /* Increased padding */
+    border-radius: 10px 10px 0 0;
+    color: white;
+}
+
+.highlight .pricing-header-card {
+    background: linear-gradient(135deg, #ffbf0ed7, #ff6f32c5); /* Highlighted gradient color */
+}
+
+.pricing-header-card h2 {
+    font-size: 42px; /* Increased font size */
+    margin: 0;
+}
+
+.pricing-header-card p {
+    font-size: 15px; /* Increased font size */
+    margin-top: 15px; /* Increased margin */
+    color: #eaeaea;
+}
+
+.price {
+    font-size: 60px; /* Increased font size */
+    color: #f7670e;
+    margin: 30px 0; /* Increased margin */
+}
+
+.price span {
+    font-size: 20px; /* Increased font size */
+    color: #666;
+}
+
+.included {
+    font-weight: bold;
+    margin-bottom: 30px; /* Increased margin */
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px; /* Increased margin */
+}
+
+.pricing-features li {
+    font-size: 20px; /* Increased font size */
+    color: #141414;
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.get-started {
+    background: linear-gradient(45deg, #f75f00, #fca849);
+    border: none;
+    padding: 15px 30px; /* Increased padding */
+    color: white;
+    font-size: 18px; /* Increased font size */
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+.get-started:hover {
+    background: linear-gradient(45deg, #ff7300, #b96301);
+}
+
+/* Highlight the middle card */
+.highlight {
+    background-color: #ffffff;
+    border: 2px solid #ff8c47;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+/* Testimonials Section *//* Testimonials Section *//* Testimonials Section *//* Testimonials Section */
+
+#testimonials {
+    background-color: #f9f9f9; /* Background color for the section */
+    padding: 50px 20px;
+}
+
+.containertest {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 30px;
+}
+
+.testimonials-grid {
+    display: flex;
+    flex-wrap: nowrap; /* Keep testimonials in one line */
+    overflow: hidden; /* Hide overflow if testimonials go outside container */
+}
+.testimonials-grid {
+    display: flex;
+    flex-wrap: nowrap; /* No wrapping, so all testimonials are in one line */
+    overflow: hidden; /* Hide the overflow to create the sliding effect */
+    width: 100%; /* Ensure the grid takes up the full width */
+}
+
+.testimonial-box {
+    flex: 0 0 33.33%; /* Each testimonial takes up one-third of the width */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.testimonial-quote {
+    font-style: italic; /* Italicize quotes */
+    margin: 15px 0; /* Spacing around the quote */
+}
+
+.testimonial-author {
+    font-weight: bold; /* Bold author names */
+}
+
+.testimonial-photo {
+    width: 50%; /* Half width of the testimonial box */
+    border-radius: 50%; /* Circular images */
+    margin-top: 10px; /* Space above the photo */
+}
+
+#prevButton, #nextButton {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#prevButton:hover, #nextButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .testimonial-box {
+        flex: 0 0 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+
+
+
+.ctaHome a {
+    background: linear-gradient(90deg, #f0b500, #d95f00); /* Softer yellow-orange gradient */
+    color: #3b3b3b; /* Change text color to white for better contrast */
+    padding: 10px 20px; /* Padding for button */
+    border: 4px solid #fff; /* Thick white border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    font-size: 18px; /* Set font size for the CTA button */
+    font-weight: bold; /* Make text bold */
+}
+
+.ctaHome a:hover {
+    background: linear-gradient(90deg, #d95f00, #f0a500); /* Softer reverse gradient on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.562); /* Darker shadow on hover */
+}

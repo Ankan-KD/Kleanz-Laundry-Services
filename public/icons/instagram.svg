@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 128 128" id="instagram">
+  <defs>
+    <clipPath id="b">
+      <circle cx="64" cy="-99" r="64" fill="none"></circle>
+    </clipPath>
+    <clipPath id="c">
+      <path fill="none" d="M64 128a64 64 0 1 1 64-64 64.07 64.07 0 0 1-64 64ZM64 8a56 56 0 1 0 56 56A56.06 56.06 0 0 0 64 8Z"></path>
+    </clipPath>
+    <clipPath id="e">
+      <path fill="none" d="M64 48a16 16 0 1 0 16 16 16 16 0 0 0-16-16Zm0 24a8 8 0 1 1 8-8 8 8 0 0 1-8 8Z"></path>
+    </clipPath>
+    <clipPath id="f">
+      <path fill="none" d="M84 100H44a16 16 0 0 1-16-16V44a16 16 0 0 1 16-16h40a16 16 0 0 1 16 16v40a16 16 0 0 1-16 16ZM44 36a8 8 0 0 0-8 8v40a8 8 0 0 0 8 8h40a8 8 0 0 0 8-8V44a8 8 0 0 0-8-8Z"></path>
+    </clipPath>
+    <clipPath id="g">
+      <circle cx="82" cy="46" r="5" fill="none"></circle>
+    </clipPath>
+    <clipPath id="i">
+      <circle cx="82" cy="-280" r="5" fill="none"></circle>
+    </clipPath>
+    <radialGradient id="a" cx="27.5" cy="-41.5" r="137.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffd676"></stop>
+      <stop offset=".25" stop-color="#f2a454"></stop>
+      <stop offset=".38" stop-color="#f05c3c"></stop>
+      <stop offset=".7" stop-color="#c22f86"></stop>
+      <stop offset=".96" stop-color="#6666ad"></stop>
+      <stop offset=".99" stop-color="#5c6cb2"></stop>
+    </radialGradient>
+    <radialGradient xlink:href="#a" id="d" cx="27.5" cy="121.5" r="148.5"></radialGradient>
+    <radialGradient xlink:href="#a" id="h" cx="13.87" cy="140.38" r="185.63"></radialGradient>
+    <radialGradient xlink:href="#a" id="j" cx="13.87" cy="-185.62" r="185.63"></radialGradient>
+  </defs>
+  <g clip-path="url(#b)">
+    <circle cx="27.5" cy="-41.5" r="137.5" fill="url(#a)"></circle>
+  </g>
+  <g clip-path="url(#c)">
+    <circle cx="27.5" cy="121.5" r="148.5" fill="url(#d)"></circle>
+  </g>
+  <g clip-path="url(#e)">
+    <circle cx="27.5" cy="121.5" r="148.5" fill="url(#d)"></circle>
+  </g>
+  <g clip-path="url(#f)">
+    <circle cx="27.5" cy="121.5" r="148.5" fill="url(#d)"></circle>
+  </g>
+  <g clip-path="url(#g)">
+    <circle cx="13.87" cy="140.38" r="185.63" fill="url(#h)"></circle>
+  </g>
+  <g clip-path="url(#i)">
+    <circle cx="13.87" cy="-185.62" r="185.63" fill="url(#j)"></circle>
+  </g>
+</svg>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Address</title>
+    <link rel="stylesheet" href="CSS/location_time.css">
+    <link rel="stylesheet" href="CSS/header_footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="Photos/WebsiteLogo.png"></img>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li>
+                <a href="services.html">Services</a>
+
+            </li>
+            <li>
+                <a href="Help.html">Contact Us</a>
+
+            </li>
+            <li><a href="Chatbox.html">Chatbox</a></li>
+            <li><a href="login.html">Login</a></li>
+            <div class="cta1">
+                <a href="schedule_order.html">Schedule A Service</a>
+            </div>
+        </ul>
+    </nav>
+</header>
+<BR>
+
+<div class="container">
+    <div class="address-form">
+        <h2>Add New Address</h2>
+        <form class="form">
+            <label>Kolkata, West Bengal, India
+                <button class="edit-button" type="button"></button>
+            </label>
+            <br>
+            <div class="address-type">
+                <input type="radio" id="home" name="addressType" value="home" checked>
+                <label for="home">Home</label>
+                <input type="radio" id="office" name="addressType" value="office">
+                <label for="office">Office</label>
+                <input type="radio" id="hotel" name="addressType" value="hotel">
+                <label for="hotel">Hotel</label>
+                <input type="radio" id="other" name="addressType" value="other">
+                <label for="other">Other</label>
+            </div>
+            <label>House-No. / Flat-No.</label>
+            <input type="text" name="houseNumber" placeholder="Enter your house/flat number" required>
+            <label>Street / Road</label>
+            <input type="text" name="street" placeholder="Enter your street/road" required>
+            <label>Landmark (Optional)</label>
+            <input type="text" name="landmark" placeholder="Enter a landmark">
+            <label>Location</label>
+            <select id="Location" name="location" required>
+                <option value="" disabled selected>Select Area</option>
+                <option value="Baguiati">Baguiati</option>
+                <option value="Baguiati">Baguiati</option>
+                <option value="Ballygunge">Ballygunge</option>
+                <option value="Baranagar">Baranagar</option>
+                <option value="Barrackpore">Barrackpore</option>
+                <option value="Behala">Behala</option>
+                <option value="Beliaghata">Beliaghata</option>
+                <option value="Bowbazar">Bowbazar</option>
+                <option value="Chandni Chowk">Chandni Chowk</option>
+                <option value="Dumdum">Dumdum</option>
+                <option value="Esplanade">Esplanade</option>
+                <option value="Garia">Garia</option>
+                <option value="Gariahat">Gariahat</option>
+                <option value="Howrah">Howrah</option>
+                <option value="Jadavpur">Jadavpur</option>
+                <option value="Kalighat">Kalighat</option>
+                <option value="Kankurgachi">Kankurgachi</option>
+                <option value="Kasba">Kasba</option>
+                <option value="Kestopur">Kestopur</option>
+                <option value="Kidderpore">Kidderpore</option>
+                <option value="Lake Gardens">Lake Gardens</option>
+                <option value="Maniktala">Maniktala</option>
+                <option value="New Alipore">New Alipore</option>
+                <option value="New Town">New Town</option>
+                <option value="Park Circus">Park Circus</option>
+                <option value="Park Street">Park Street</option>
+                <option value="Phoolbagan">Phoolbagan</option>
+                <option value="Salt Lake">Salt Lake</option>
+                <option value="Sealdah">Sealdah</option>
+                <option value="Shyambazar">Shyambazar</option>
+                <option value="Taltala">Taltala</option>
+                <option value="Tollygunge">Tollygunge</option>
+                <option value="Ultadanga">Ultadanga</option>
+                <option value="VIP Road">VIP Road</option>
+                <option value="Topsia">Topsia</option>
+                <option value="Mukundapur">Mukundapur</option>
+                <option value="Rajarhat">Rajarhat</option>
+                <!-- Other options -->
+            </select>
+            <label>Pincode</label>
+            <input type="text" name="pincode" placeholder="Enter your Pincode" required>
+            <button type="submit" class="next-button">Next</button>
+        </form>
+    </div>
+
+    <div id="map"></div>
+</div>
+
+
+
+
+
+
+
+<!-- FOOTER SECTION -->
+<footer>
+    <div class="taglinefooter">
+        <h3>Enjoy Life Stress-Free, Kleanz Has You Covered!</h3>
+    </div>
+
+<br>
+    <div class="footer-container">
+        <div class="footer-row">
+
+
+            <div class="footer-col logo-col">
+                <img src="Photos/WebsiteLogo.png" alt="DaynDry Logo" class="logo" />
+                <custom-para style="color: rgb(202, 202, 202);">
+                    Kleanz Pvt. Ltd.<br>
+                    124, 60, Basanta Lal Saha Rd, Tara Park, Behala, Kolkata, West Bengal 700053
+                </custom-para>
+
+
+                <div class="support">
+                    <custom-para style="color: rgb(202, 202, 202);"><strong>Support center 24/7</strong><br>
+                    <i class="fas fa-headset"></i> +1 555 707-1234</custom-para>
+                </div>
+            </div>
+
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Dry Cleaning</a></li>
+                    <li><a href="#">Laundry Service</a></li>
+                    <li><a href="#">Wet Cleaning</a></li>
+                    <li><a href="#">Wedding Gowns</a></li>
+                    <li><a href="#">Express Service</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col newsletter-col">
+                <center><h44>Subscribe Our Newsletter</h44></center>
+                <custom-para>
+                    Enter your email and we will send you newsletters.
+                </custom-para>
+                
+                <form>
+                    <input type="text" placeholder="Your Name" />
+                    <input type="email" placeholder="Your email" />
+                    <button type="submit">Subcribe  </button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook" class="social-icon"></a>
+                <a href="#"><img src="icons/twitter-x.svg" alt="Twitter" class="social-icon"></a>
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram" class="social-icon"></a>
+                <a href="#"><img src="icons/youtube.svg" alt="YouTube" class="social-icon"></a>
+            </div>
+            
+            <p>Copyright © 2024 Kleanz</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".form");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const addressDetails = {
+            location: document.querySelector("#Location").value,
+            addressType: document.querySelector("input[name='addressType']:checked").value,
+            houseNumber: document.querySelector("input[name='houseNumber']").value,
+            street: document.querySelector("input[name='street']").value,
+            landmark: document.querySelector("input[name='landmark']").value,
+            pincode: document.querySelector("input[name='pincode']").value
+        };
+
+        // Storing details in localStorage
+        localStorage.setItem("addressDetails", JSON.stringify(addressDetails));
+
+        console.log("Address details saved successfully!");
+        
+        // Optional: Redirect to next page
+        window.location.href = "select_service.html";
+    });
+});
+
+</script>
+
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="JS/location.js"></script>
+<script src="JS/navbar.js"></script>
+</body>
+</html>

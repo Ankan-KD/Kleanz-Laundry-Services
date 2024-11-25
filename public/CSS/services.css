@@ -1,0 +1,261 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+/*Banner section*/
+.service-section {
+    position: relative;
+    background: url('../Photos/banner.jpg') no-repeat center center/cover;
+    height: 300px; /* Full viewport height */
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    border-bottom-right-radius: 100px; /* Round the top-right corner */
+    overflow: hidden;
+}
+
+
+
+.service-content {
+    position: relative;
+    text-align: left;
+    max-width: 600px;
+    z-index: 2; /* Ensure content is above the overlay */
+    margin-left: 90px; /* Move content more to the left */
+    animation: slideUp 1s ease forwards;
+    opacity: 0;
+}
+
+.service-heading {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.service-text {
+    font-size: 18px;
+    line-height: 1.5;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Slide-up animation */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 80%;
+    padding: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Left Content */
+.left-content {
+    width: 75%; /* Adjust this as necessary */
+    padding-right: 20px;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.096);
+    margin-bottom: 40px;
+}
+
+.main-content h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.main-content p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.how-to-use {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.how-to-use h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.how-to-use p {
+    margin-bottom: 20px;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefits ul {
+    list-style: none;
+}
+
+.benefits ul li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.benefits ul li:before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #FFA500;
+    font-size: 18px;
+}
+
+/* Images Section Under Main Heading */
+.laundry-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.laundry-images img {
+    width: 48%; /* Adjust width to fit within the layout */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+/* Right Sidebar Content */
+.right-content {
+    width: 30%; /* Adjust this as necessary */
+}
+
+.sidebar {
+    width: 100%;
+}
+
+.services-box, .discount-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services-box h3 {
+    background-color: #FFA500;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.services-box ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.5;
+}
+
+.services-box ul li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.services-box ul li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #FFA500;
+    font-size: 18px;
+}
+
+
+.discount-box {
+    position: relative;
+    background-image: url('../Photos/ServiceLM.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /* Add some padding for spacing */
+    border-radius: 8px;
+    color: white; /* Set default text color to white for readability */
+}
+
+.discount-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.836); /* Black overlay with 50% opacity */
+    border-radius: 8px; /* Match border-radius with the box */
+    z-index: 1; /* Place it below the text */
+}
+
+.discount-box h3,
+.discount-box p {
+    position: relative; /* Position relative to the overlay */
+    z-index: 2; /* Bring text above the overlay */
+}
+
+.discount-box button {
+    position: relative; /* Position relative to the overlay */
+    z-index: 2; /* Bring button above the overlay */
+}
+
+
+.discount-box button {
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.discount-box button:hover {
+    background-color: #e68a00;
+}
+
+

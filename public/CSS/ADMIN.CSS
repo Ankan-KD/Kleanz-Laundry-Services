@@ -1,0 +1,179 @@
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(95deg, #f3cfb3cb,#fce8d2ab);
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2980b9;  /* Vivid blue */
+}
+
+/* Search Bar Styles */
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 12px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 1px solid #3498db;  /* Bright blue border */
+    border-radius: 4px;
+    margin-right: 10px;
+    background-color: #ecf0f1;  /* Light gray */
+}
+
+.search-bar button {
+    padding: 12px 20px;
+    background-color: #129df3;  /* Bright yellow/orange */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #e67e22;  /* Darker yellow/orange */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid #000000;  /* Border around the table */
+}
+
+thead {
+    background-color: #de6400;  /* Bright yellow */
+}
+
+thead th {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    width: auto;
+    text-transform: uppercase;
+    color: #ffffff;  /* White text */
+    border: 1px solid #f2f2f2;  /* Border around each header cell */
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;  /* Border between rows */
+}
+
+tbody tr:hover {
+    background-color: #8eecff84;  /* Light blue hover */
+}
+
+tbody td {
+    padding: 15px;
+    width:auto ;
+    font-size: 14px;
+    color: #333;
+    border: 1px solid #ddd;  /* Border around each cell */
+}
+
+tbody td:first-child {
+    font-weight: 600;
+}
+
+tbody td:last-child {
+    text-align: left;
+}
+
+/* Status Dropdown */
+select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #3498db;  /* Blue border */
+    border-radius: 8px;  /* More rounded */
+    cursor: pointer;
+    background-color: #ecf0f1;  /* Light gray */
+    transition: background-color 0.3s ease;
+}
+
+.empty-message {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+    padding: 20px;
+}
+
+/* Logout Button */
+.logout-button {
+    width: max-content;
+    text-align: center;
+    align-self: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e74c3c;  /* Vibrant red */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;  /* Rounder corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;  /* Darker red for hover */
+}
+
+
+
+/* Save Button */
+.save-button {
+    width: max-content;
+    text-align: center;
+    align-self: center;
+    margin-top: 20px;
+    margin-right: 30px;
+    padding: 15px;
+    background-color: #12b200;  /* Vibrant red */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;  /* Rounder corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #c0392b;  /* Darker red for hover */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 12px;
+    }
+
+    thead th,
+    tbody td {
+        padding: 10px;
+    }
+
+    .search-bar input {
+        width: 70%;
+    }
+}

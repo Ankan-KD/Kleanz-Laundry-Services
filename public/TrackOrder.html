@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/TRACKORDER.css">
+    <link rel="stylesheet" href="CSS/header_footer.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="Photos/WebsiteLogo.png"></img>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li>
+                <a href="services.html">Services</a>
+
+            </li>
+            <li>
+                <a href="Help.html">Contact Us</a>
+
+            </li>
+            <li><a href="Chatbox.html">Chatbox</a></li>
+            <li><a href="login.html">Login</a></li>
+            <div class="cta1">
+                <a href="schedule_order.html">Schedule A Service</a>
+            </div>
+        </ul>
+    </nav>
+</header>
+<BR>
+
+
+<!-- Ask for userId -->
+<div class="container">
+    <div class="user-id-section">
+        <label for="userId">Enter your Order ID:</label>
+        <input type="text" id="userId" placeholder="Enter 7 Characters Order-ID">
+        <button onclick="fetchUserDetails()">Submit</button>
+    </div>
+
+    <!-- Displaying the user details -->
+    <div id="user-details-section" class="details-section" style="display: none;">
+        <h2>Order Details</h2>
+        <table id="order-details">
+            <!-- Add the headers for the order table -->
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Quantity</th>
+                    <th>Items</th>
+                    <th>Instructions</th>
+                    <th>Status</th> <!-- New column for status -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Order details will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+        <h2>Address Details</h2>
+        <table id="address-details">
+            <thead>
+                <tr>
+                    <th>Address Type</th>
+                    <th>House Number</th>
+                    <th>Street</th>
+                    <th>Location</th>
+                    <th>Pincode</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Address details will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+        <h2>Selected Services</h2>
+        <div id="services-details"></div>
+
+        <button class="logout-button" onclick="logout()">Go Back</button>
+    </div>
+</div>
+
+
+
+<br>
+<!-- FOOTER SECTION --><!-- FOOTER SECTION --><!-- FOOTER SECTION --><!-- FOOTER SECTION --><!-- FOOTER SECTION -->
+<footer>
+    <div class="taglinefooter">
+        <h3>Enjoy Life Stress-Free, Kleanz Has You Covered!</h3>
+    </div>
+
+<br>
+    <div class="footer-container">
+        <div class="footer-row">
+
+
+            <div class="footer-col logo-col">
+                <img src="Photos/WebsiteLogo.png" alt="DaynDry Logo" class="logo" />
+                <custom-para style="color: rgb(202, 202, 202);">
+                    Kleanz Pvt. Ltd.<br>
+                    124, 60, Basanta Lal Saha Rd, Tara Park, Behala, Kolkata, West Bengal 700053
+                </custom-para>
+
+
+                <div class="support">
+                    <custom-para style="color: rgb(202, 202, 202);"><strong>Support center 24/7</strong><br>
+                    <i class="fas fa-headset"></i> +91 9038421528</custom-para>
+                </div>
+            </div>
+
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="Chatbox.html">FAQ's</a></li>
+                    <li><a href="Help.html">Contact Us</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="Help.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#service_list">Dry Cleaning</a></li>
+                    <li><a href="services.html#service_list">Laundry Service</a></li>
+                    <li><a href="services.html#service_list">Wet Cleaning</a></li>
+                    <li><a href="services.html#service_list">Wedding Gowns</a></li>
+                    <li><a href="services.html#service_list">Express Service</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col newsletter-col">
+                <center><h44>Subscribe Our Newsletter</h44></center>
+                <custom-para>
+                    Enter your email and we will send you newsletters.
+                </custom-para>
+                
+                <form>
+                    <input type="text" placeholder="Your Name" />
+                    <input type="email" placeholder="Your email" />
+                    <button type="submit">Subcribe  </button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook" class="social-icon"></a>
+                <a href="#"><img src="icons/twitter-x.svg" alt="Twitter" class="social-icon"></a>
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram" class="social-icon"></a>
+                <a href="#"><img src="icons/youtube.svg" alt="YouTube" class="social-icon"></a>
+            </div>
+            
+            <p>Copyright © 2024 Kleanz</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+<script>
+    function fetchUserDetails() {
+        const userId = document.getElementById('userId').value;
+
+        // Fetch user data from the backend
+        fetch(`/api/user/${userId}`)
+            .then(response => response.json())
+            .then(data => {
+                const { orders, addresses, services } = data;
+
+                // Display order details in a table
+                const orderDetailsTable = document.getElementById('order-details').getElementsByTagName('tbody')[0];
+                if (orders.length > 0) {
+                    orders.forEach(order => {
+                        const row = orderDetailsTable.insertRow();
+                        row.innerHTML = `
+                            <td>${order.userId}</td>
+                            <td>${order.name}</td>
+                            <td>${order.phone}</td>
+                            <td>${order.email}</td>
+                            <td>${order.quantity}</td>
+                            <td>${order.items.map(item => `${item.itemName} (Qty: ${item.itemQuantity})`).join('<br>')}</td>
+                            <td>${order.message || 'No message'}</td>
+                            <td>${order.status || 'In Progress'}</td>  <!-- Status for the order -->
+                        `;
+                    });
+                } else {
+                    orderDetailsTable.innerHTML = '<tr><td colspan="8">No orders found for this user.</td></tr>';
+                }
+
+                // Display address details in a table
+                const addressDetailsTable = document.getElementById('address-details').getElementsByTagName('tbody')[0];
+                if (addresses.length > 0) {
+                    addresses.forEach(address => {
+                        const row = addressDetailsTable.insertRow();
+                        row.innerHTML = `
+                            <td>${address.addressType}</td>
+                            <td>${address.houseNumber}</td>
+                            <td>${address.street}</td>
+                            <td>${address.location}</td>
+                            <td>${address.pincode}</td>
+                        `;
+                    });
+                } else {
+                    addressDetailsTable.innerHTML = '<tr><td colspan="5">No address found for this user.</td></tr>';
+                }
+
+                // Display selected services
+                const servicesDetailsDiv = document.getElementById('services-details');
+                if (services && services.length > 0) {
+                    servicesDetailsDiv.innerHTML = `<p><strong>Services:</strong><br> ${services.join(', ')}</p>`;
+                } else {
+                    servicesDetailsDiv.innerHTML = '<p>No services selected for this user.</p>';
+                }
+
+                // Show the details section
+                document.getElementById('user-details-section').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error fetching user details:', error);
+                alert('Error loading user details.');
+            });
+    }
+
+    function logout() {
+        console.log('Logging out...');
+        window.location.href = 'Homepage.html'; // Redirect to homepage after logout
+    }
+</script>
+
+</body>
+</html>

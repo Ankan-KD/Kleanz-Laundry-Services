@@ -1,0 +1,284 @@
+body {
+    background: url('../Photos/bg.jpg') no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container that holds both sections */
+.main-container {
+    display: flex;
+    width: 95%;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 2; /* Ensure it stays above the overlay */
+    margin: 20px auto; /* Center the container */
+}
+
+/* Left section */
+.left-section {
+    padding: 40px;
+    width: 50%; /* Adjust to 50% to match the design */
+    position: relative;
+    font-size: 20px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.left-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.left-section * {
+    position: relative;
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.content h2 {
+    font-size: 16px;
+    color: #ffcf51;
+    margin-bottom: 20px;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.content ul {
+    list-style: none;
+}
+
+.content ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+.content ul li::before {
+    content: '✔';
+    color: #ffcf51;
+    margin-right: 10px;
+}
+
+/* Right section for the form */
+.right-section {
+    width: 60%; /* Adjust to 50% to match the design */
+    padding: 20px;
+    background-color: #ffffff91;
+    z-index: 2; /* Ensure it stays above the overlay */
+    border-radius: 8px 50px 0 50px;
+}
+
+.right-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form container */
+form {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px; /* Ensure the button has space */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Input fields */
+input, select, textarea {
+    width: 105%;
+    padding: 12px;
+    border: none;
+border-radius: 5px;
+    background-color: rgba(92, 92, 92, 0.501);
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-bottom: 2px solid #ffcf51; /* Highlight border when focused */
+}
+
+::placeholder {
+    color: #aaa;
+}
+
+/* Submit button styling */
+button {
+    width: fit-content;
+    align-self: center;
+    padding: 12px;
+    background-color: #ee8f00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ac7705;
+}
+
+/* Form group for Quantity and Distribute Items */
+.form-group-inline {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px; /* Reduce gap if needed */
+    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+    width: 100%; /* Ensure it takes the full width of the container */
+    box-sizing: border-box; /* Prevents overflow due to padding/margin */
+}
+
+
+
+/* Styling for the Distribute Items section */
+#dynamic-items-section {
+    flex: 1; /* Allows it to take up remaining space dynamically */
+    display: none; /* Hidden initially */
+    width: 100%; /* Take full width of the container */
+    max-width: none; /* Remove the max-width restriction */
+    box-sizing: border-box; /* Ensures padding/margin don't affect the width */
+}
+
+
+#dynamic-items-section label {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #000000;
+}
+
+.item-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Space between elements */
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+.item-type {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    width: max-content;
+}
+
+.item-amount {
+    flex: 0.5;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    width: max-content;
+}
+
+#add-item-dropdown {
+    background-color: #ffcf51;
+    border: none;
+    color: #333;
+    font-size: 14px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#add-item-dropdown:hover {
+    background-color: #e0b045;
+}
+
+.item-group button {
+    padding: 5px 8px;
+    background-color: #ff6b6b;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.item-group button:hover {
+    background-color: #e35a5a;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content ul li {
+        font-size: 14px;
+    }
+
+    .form-group-inline {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #dynamic-items-section {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+}
+
+
+.other-input {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 14px;
+    width: 70%;
+    box-sizing: border-box;
+}

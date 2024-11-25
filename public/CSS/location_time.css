@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('../Photos/bg.jpg') no-repeat center center/cover;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    max-width: 90%;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.61);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.address-form {
+    width: 45%;
+}
+
+.address-form h2 {
+    margin-bottom: 20px;
+    color: #455D51;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 15px;
+    font-size: 14px;
+    /* font-weight: bold; */
+    font-family: 'Nunito', sans-serif;
+}
+
+form input[type="text"]{
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form select {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background-color: white;
+    appearance: none; /* Removes default arrow for custom styling */
+    cursor: pointer;
+}
+
+.address-type {
+    margin-bottom: 10px;
+}
+
+.address-type input {
+    margin-right: 5px;
+}
+
+.next-button {
+    background-color: #edc604;
+    color: white;
+    font-weight: bold;
+    width: 400px;
+    padding: 10px;
+    margin: 20px auto; /* Centers the button */
+    border: 2px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Ensures the button is treated as a block element for centering */
+}
+
+#map {
+    width: 50%;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 50px;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Laundry Service</title>
+    <link rel="stylesheet" href="CSS/schedule_order.css">
+    <link rel="stylesheet" href="CSS/header_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="Photos/WebsiteLogo.png"></img>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li>
+                <a href="services.html">Services</a>
+
+            </li>
+            <li>
+                <a href="Help.html">Contact Us</a>
+
+            </li>
+            <li><a href="Chatbox.html">Chatbox</a></li>
+            <li><a href="login.html">Login</a></li>
+            <div class="cta1">
+                <a href="schedule_order.html">Schedule A Service</a>
+            </div>
+        </ul>
+    </nav>
+</header>
+<BR>
+
+
+
+
+
+    <div class="main-container">
+        <div class="left-section">
+            <div class="content">
+                <h2>PICKUP REQUEST</h2>
+                <h1>Ready to get started with delivery laundry service?</h1>
+                <p>Enjoy premium laundry care without leaving the comfort of your home. Our convenient, fast, and reliable delivery service ensures your clothes are cleaned, pressed, and delivered right to your door.</p>
+                <ul>
+                    <li>Hassle-free scheduling at your convenience</li>
+                    <li>Expert cleaning for all types of fabrics</li>
+                    <li>Eco-friendly detergents and sustainable practices</li>
+                    <li>Real-time tracking of your laundry status</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <h2>Fill out this form</h2>
+            <form id="schedule-form" action="/api/schedule-order" method="POST" class="form">
+                <!-- Name and Phone Fields -->
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" id="Name" name="name" placeholder="Name" required>
+                </div>
+                
+                <!-- Phone Number  -->
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" placeholder="Phone" required>
+                </div>
+                
+                <!-- Email Address -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+            
+                <div class="form-group-inline">
+                    <!-- Quantity -->
+                    <div class="form-group">
+                        <label for="quantity">Quantity (in Pcs)</label>
+                        <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter total quantity" required style="width:min-content">
+                    </div>
+                
+                    <!-- Distribute Items -->
+                    <div id="dynamic-items-section">
+                        <label>Distribute Items</label>
+                        <div id="items-list">
+                            <!-- Dynamic dropdowns will appear here -->
+                        </div>
+                        <button type="button" id="add-item-dropdown">Add Items</button>
+                    </div>
+                </div>
+                
+
+                
+                <!-- Message Field -->
+                <div class="form-group">
+                    <label for="message">Instructions (if any)</label>
+                    <textarea id="message" name="message" placeholder="Your message" rows="4"></textarea>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit"> Continue </button>
+            </form>
+            
+        </div>
+    </div>
+
+
+
+<!-- FOOTER SECTION -->
+<footer>
+    <div class="taglinefooter">
+        <h3>Enjoy Life Stress-Free, Kleanz Has You Covered!</h3>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-row">
+
+
+            <div class="footer-col logo-col">
+                <img src="Photos/WebsiteLogo.png" alt="DaynDry Logo" class="logo" />
+                <custom-para style="color: rgb(202, 202, 202);">
+                    Kleanz Pvt. Ltd.<br>
+                    124, 60, Basanta Lal Saha Rd, Tara Park, Behala, Kolkata, West Bengal 700053
+                </custom-para>
+
+
+                <div class="support">
+                    <custom-para style="color: rgb(202, 202, 202);"><strong>Support center 24/7</strong><br>
+                    <i class="fas fa-headset"></i> +91 9038421528</custom-para>
+                </div>
+            </div>
+
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="Chatbox.html">FAQ's</a></li>
+                    <li><a href="Help.html">Contact Us</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="Help.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#service_list">Dry Cleaning</a></li>
+                    <li><a href="services.html#service_list">Laundry Service</a></li>
+                    <li><a href="services.html#service_list">Wet Cleaning</a></li>
+                    <li><a href="services.html#service_list">Wedding Gowns</a></li>
+                    <li><a href="services.html#service_list">Express Service</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col newsletter-col">
+                <center><h44>Subscribe Our Newsletter</h44></center>
+                <custom-para>
+                    Enter your email and we will send you newsletters.
+                </custom-para>
+                
+                <form>
+                    <input type="text" placeholder="Your Name" />
+                    <input type="email" placeholder="Your email" />
+                    <button type="submit">Subcribe  </button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook" class="social-icon"></a>
+                <a href="#"><img src="icons/twitter-x.svg" alt="Twitter" class="social-icon"></a>
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram" class="social-icon"></a>
+                <a href="#"><img src="icons/youtube.svg" alt="YouTube" class="social-icon"></a>
+            </div>
+            
+            <p>Copyright © 2024 Kleanz</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+<script src="JS/schedule_order.js"></script>
+<script src="JS/navbar.js"></script>
+</body>
+</html>

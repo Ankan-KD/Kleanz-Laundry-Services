@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Build Your Laundry Cart</title>
+    <link rel="stylesheet" href="CSS/select_service.css">
+    <link rel="stylesheet" href="CSS/header_footer.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="Photos/WebsiteLogo.png"></img>
+        </div>
+        <ul class="nav-links">
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li>
+                <a href="services.html">Services</a>
+
+            </li>
+            <li>
+                <a href="Help.html">Contact Us</a>
+
+            </li>
+            <li><a href="Chatbox.html">Chatbox</a></li>
+            <li><a href="login.html">Login</a></li>
+            <div class="cta1">
+                <a href="schedule_order.html">Schedule A Service</a>
+            </div>
+        </ul>
+    </nav>
+</header>
+<BR>
+
+
+
+
+
+    <div class="container">
+        <center><head2>Build Your Laundry Cart</head2></center>
+        <br><br>
+        <form id="laundryForm" action="/submit-laundry" method="POST">
+            <div class="card">
+                <div class="icon">
+                    <img src="icons/dry_cleaning.png" alt="Dry Cleaning">
+                </div>
+                <div class="details">
+                    <custom-heading>BASIC DRY CLEANING</custom-heading>
+                    <ul>
+                        <li>Formal wear,</li>
+                        <li>Ornamentals, Soft Toys</li>
+                    </ul>
+                </div>
+                <div class="price-container">
+                    <custom-price>🕒 48-72 Hrs | ₹29/PC onwards</custom-price>
+                    <input type="checkbox" class="select-service" name="services" value="dry_cleaning">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icon">
+                    <img src="icons/premium-quality.png" alt="Premium Laundry">
+                </div>
+                <div class="details">
+                    <custom-heading>PREMIUM LAUNDRY </custom-heading>
+                    <ul>
+                        <li>Formal wear, Bed sheets</li>
+                        <li>Delicates</li>
+                        <li>Espensive Suites</li>
+                    </ul>
+                </div>
+                <div class="price-container">
+                    <custom-price>🕒 24-48 Hrs | ₹149/PC onwards</custom-price>
+                    <input type="checkbox" class="select-service" name="services" value="premium_laundry">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icon">
+                    <img src="icons/laundry.png" alt="Wash and Fold">
+                </div>
+                <div class="details">
+                    <custom-heading>WASH & FOLD</custom-heading>
+                    <ul>
+                        <li>Stack Packing</li>
+                        <li>Daily wear, Casuals</li>
+                    </ul>
+                </div>
+                <div class="price-container">
+                    <custom-price>🕒 12-24 Hrs | ₹50/PC onwards</custom-price>
+                    <input type="checkbox" class="select-service" name="services" value="wash_fold">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icon">
+                    <img src="icons/wash_iron.png" alt="Wash and Iron">
+                </div>
+                <div class="details">
+                    <custom-heading>LAUNDRY & IRON</custom-heading>
+                    <ul>
+                        <li>Sarees, Bedsheets</li>
+                        <li>Covers</li>
+                    </ul>
+                </div>
+                <div class="price-container">
+                    <custom-price>🕒 12-20 Hrs | ₹99/PC onwards</custom-price>
+                    <input type="checkbox" class="select-service" name="services" value="wash_iron">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="icon">
+                    <img src="icons/steam-iron.png" alt="Steam Spray">
+                </div>
+                <div class="details">
+                    <custom-heading>STEAM SPRAY</custom-heading>
+                    <ul>
+                        <li>Benarasis,</li>
+                        <li>Coat-Pant</li>
+                    </ul>
+                </div>
+                <div class="price-container">
+                    <custom-price>🕒 6-9 Hrs | ₹120/PC onwards</custom-price>
+                    <input type="checkbox" class="select-service" name="services" value="steam_spray">
+                </div>
+            </div>
+
+            <center><button type="submit" id="continueButton" disabled>Continue</button></center>
+        </form>
+    </div>
+    <br><br>
+
+
+
+
+
+<!-- FOOTER SECTION -->
+<footer>
+    <div class="taglinefooter">
+        <h3>Enjoy Life Stress-Free, Kleanz Has You Covered!</h3>
+    </div>
+
+<br>
+    <div class="footer-container">
+        <div class="footer-row">
+
+
+            <div class="footer-col logo-col">
+                <img src="Photos/WebsiteLogo.png" alt="DaynDry Logo" class="logo" />
+                <custom-para style="color: rgb(202, 202, 202);">
+                    Kleanz Pvt. Ltd.<br>
+                    124, 60, Basanta Lal Saha Rd, Tara Park, Behala, Kolkata, West Bengal 700053
+                </custom-para>
+
+
+                <div class="support">
+                    <custom-para style="color: rgb(202, 202, 202);"><strong>Support center 24/7</strong><br>
+                    <i class="fas fa-headset"></i> +1 555 707-1234</custom-para>
+                </div>
+            </div>
+
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="Chatbox.html">FAQ's</a></li>
+                    <li><a href="Help.html">Contact Us</a></li>
+                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="Help.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html#service_list">Dry Cleaning</a></li>
+                    <li><a href="services.html#service_list">Laundry Service</a></li>
+                    <li><a href="services.html#service_list">Wet Cleaning</a></li>
+                    <li><a href="services.html#service_list">Wedding Gowns</a></li>
+                    <li><a href="services.html#service_list">Express Service</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-col newsletter-col">
+                <center><h44>Subscribe Our Newsletter</h44></center>
+                <custom-para>
+                    Enter your email and we will send you newsletters.
+                </custom-para>
+                
+                <form>
+                    <input type="text" placeholder="Your Name" />
+                    <input type="email" placeholder="Your email" />
+                    <button type="submit">Subcribe  </button>
+                </form>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook" class="social-icon"></a>
+                <a href="#"><img src="icons/twitter-x.svg" alt="Twitter" class="social-icon"></a>
+                <a href="#"><img src="icons/instagram.svg" alt="Instagram" class="social-icon"></a>
+                <a href="#"><img src="icons/youtube.svg" alt="YouTube" class="social-icon"></a>
+            </div>
+            
+            <p>Copyright © 2024 Kleanz</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("laundryForm");
+        const continueButton = document.getElementById("continueButton");
+    
+        // Define services and their prices
+        const services = {
+            "dry_cleaning": { name: "Dry cleaning", price: 29 },
+            "premium_laundry": { name: "Premium Laundry", price: 179 },
+            "wash_fold": { name: "Laundry - Wash & Fold", price: 90 },
+            "wash_iron": { name: "Laundry - Wash & Iron", price: 79 },
+            "steam_spray": { name: "Steam Spray", price: 120 },
+        };
+    
+        // Enable the "Continue" button only if at least one service is selected
+        const checkboxes = document.querySelectorAll(".select-service");
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener("change", () => {
+                continueButton.disabled = !Array.from(checkboxes).some(cb => cb.checked);
+            });
+        });
+    
+        // Store selected services in localStorage on form submission
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // Prevent the form from submitting normally
+    
+            // Collect selected services with prices
+            const selectedServices = Array.from(checkboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => ({
+                    service: services[checkbox.value].name,
+                    price: services[checkbox.value].price
+                }));
+    
+            // Store selected services in localStorage
+            localStorage.setItem("selectedServices", JSON.stringify(selectedServices));
+    
+            // Optionally, redirect to another page
+            window.location.href = "cart_page.html";    
+        });
+    });
+    </script>
+
+    <script src="JS/select_service.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+
+    
+</body>
+</html>
