@@ -336,3 +336,130 @@ h1 {
 .checkbox-item span {
     padding-left: 5px;
 }
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    /* Banner Section Adjustments */
+    .about-section {
+        height: 200px; /* Reduce banner height on smaller screens */
+        padding: 15px; /* Less padding */
+    }
+
+    .about-heading {
+        font-size: 32px; /* Smaller font size for heading */
+    }
+
+    .about-text {
+        font-size: 16px; /* Smaller font size */
+        line-height: 1.4; /* Adjust line height */
+    }
+
+    /* Laundry Section Adjustments */
+    .laundry-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        padding: 20px; /* Less padding */
+    }
+
+    .laundry-image, .laundry-text {
+        width: 100%; /* Ensure both sections take full width */
+        text-align: center; /* Center text */
+    }
+
+    .small-image {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        width: 100%; /* Full width for small image */
+        animation: none; /* Disable animation on mobile */
+    }
+
+    .laundry-text h2 {
+        font-size: 28px; /* Smaller heading */
+    }
+
+    .laundry-text p {
+        font-size: 16px; /* Adjust text size */
+    }
+
+    /* Stats Section Adjustments */
+    .stats {
+        flex-direction: column; /* Stack stats vertically */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .stat {
+        margin-bottom: 20px; /* Space between stats */
+    }
+
+    .line {
+        display: none; /* Hide line on smaller screens */
+    }
+
+    /* Feature Section Adjustments */
+    .features {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    .feature {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    /* Logo Section Adjustments */
+    .logos img {
+        height: 80px; /* Smaller logo size */
+        margin: 20px;
+    }
+
+    /* Checklist Section Adjustments */
+    .checklist {
+        flex-direction: column; /* Stack checkboxes vertically */
+        padding: 10px; /* Less padding */
+    }
+
+    .checkbox-item {
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .checkbox-item input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Extra small screen (phones in portrait mode) */
+@media (max-width: 480px) {
+    /* Adjust banner height further */
+    .about-section {
+        height: 150px;
+    }
+
+    .about-heading {
+        font-size: 24px;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+
+    .laundry-section {
+        padding: 15px;
+    }
+
+    .laundry-text h2 {
+        font-size: 24px;
+    }
+
+    .laundry-text p {
+        font-size: 14px;
+    }
+
+    .feature {
+        padding: 8px;
+    }
+
+    .logos img {
+        height: 60px;
+        margin: 10px;
+    }
+}
